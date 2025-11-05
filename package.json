@@ -1,0 +1,15 @@
+{
+  "name": "wintech-network",
+  "version": "1.0.0",
+  "description": "Wintech Network - Network Services & Solutions Website",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
+
