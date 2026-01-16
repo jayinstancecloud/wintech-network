@@ -1,7 +1,7 @@
 {
-  "name": "wintech-network",
+  "name": "wintech-soccer",
   "version": "1.0.0",
-  "description": "Wintech Network - Network Services & Solutions Website",
+  "description": "Wintech Soccer - Premium Soccer Equipment & Gear Website",
   "type": "module",
   "scripts": {
     "dev": "vite",
