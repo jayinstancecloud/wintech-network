@@ -1,120 +1,48 @@
-// Mobile Menu Toggle
+// Mobile nav toggle
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 
 if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        
-        // Animate hamburger menu
-        const spans = menuToggle.querySelectorAll('span');
-        if (navMenu.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
-    });
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
 
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            const spans = menuToggle.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        });
+  // allow tapping Games to show dropdown on mobile
+  const gamesButton = navMenu.querySelector('.has-dropdown .nav-button');
+  const gamesDropdown = navMenu.querySelector('.has-dropdown .dropdown');
+  if (gamesButton && gamesDropdown) {
+    gamesButton.addEventListener('click', (e) => {
+      // prevent smooth-scroll logic
+      e.stopPropagation();
+      gamesDropdown.style.display = gamesDropdown.style.display === 'grid' ? 'none' : 'grid';
     });
+  }
 }
 
-// Navbar scroll effect
-let lastScroll = 0;
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)';
-    } else {
-        navbar.style.boxShadow = '0 1px 2px 0 rgb(0 0 0 / 0.05)';
+// Smooth scroll for in-page links
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    const targetId = link.getAttribute('href');
+    if (!targetId || targetId === '#') return;
+    const target = document.querySelector(targetId);
+    if (!target) return;
+    e.preventDefault();
+    const offsetTop = target.getBoundingClientRect().top + window.scrollY - 72;
+    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    if (navMenu && navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
     }
-    
-    lastScroll = currentScroll;
+  });
 });
 
-// Contact Form Handler
+// Simple contact handling
 const contactForm = document.getElementById('contactForm');
-
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form values
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
-        
-        // Here you would typically send the data to a server
-        // For now, we'll just show a success message
-        console.log('Form submitted:', formData);
-        
-        // Show success message
-        alert('Thank you for contacting Wintech Soccer! We will get back to you soon.');
-        
-        // Reset form
-        contactForm.reset();
-    });
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    console.log('Wintech contact form submitted', Object.fromEntries(formData.entries()));
+    alert('Thank you for contacting Wintech. Our team will be in touch shortly.');
+    contactForm.reset();
+  });
 }
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        
-        if (target) {
-            const offsetTop = target.offsetTop - 80; // Account for fixed navbar
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe service cards and other elements
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.service-card, .stat-item, .contact-item');
-    
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-});
-

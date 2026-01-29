@@ -1,276 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wintech Soccer - Premium Soccer Equipment & Gear</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wintech Instant Win Football</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <span class="logo-text">⚽ Wintech Soccer</span>
-                </div>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <div class="logo">Wintech</div>
+            <nav>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#products" class="nav-link">Products</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li class="has-dropdown">
+                        <button class="nav-link nav-button" type="button">
+                            Games
+                            <span class="caret">▾</span>
+                        </button>
+                        <div class="dropdown">
+                            <div class="dropdown-column">
+                                <h3 class="dropdown-heading">Instant &amp; Crash</h3>
+                                <ul>
+                                    <li><a href="crab-roulette.html">Crab Roulette – Roulette‑style racing</a></li>
+                                    <li><a href="penguin-plunge.html">Penguin Plunge – Equal‑odds racing</a></li>
+                                    <li><a href="roach-roulette.html">Roach Roulette – Roulette‑style racing</a></li>
+                                    <li><a href="rodeo.html">Rodeo – Crash game</a></li>
+                                    <li><a href="upndown-golf.html">UpnDown Golf – Instant win golf</a></li>
+                                    <li><a href="instant-win-football.html">Instant Win Football – Instant win football</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h3 class="dropdown-heading">Virtual Sports</h3>
+                                <ul>
+                                    <li><a href="goal-premier.html">Goal Premier – Football</a></li>
+                                    <li><a href="soccer-stars.html">Soccer Stars – Pre‑recorded real football</a></li>
+                                    <li><a href="virtual-basketball.html">Virtual Basketball – Basketball</a></li>
+                                    <li><a href="virtual-cricket.html">Virtual Cricket – Cricket</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#on-demand" class="nav-link">Solutions</a></li>
+                    <li><a href="#fast-play" class="nav-link">Technology</a></li>
+                    <li><a href="#company" class="nav-link">Company</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-image-container">
-            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Soccer equipment and gear" class="hero-image" onerror="this.style.display='none'">
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Premium Soccer Equipment</h1>
-                <p class="hero-subtitle">Everything you need for the beautiful game. High-quality soccer gear, equipment, and apparel for players of all levels</p>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn btn-primary">Shop Now</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Products</h2>
-                <p class="section-subtitle">Premium quality soccer equipment and gear for players, teams, and enthusiasts</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://fas.org.sg/wp-content/uploads/2020/11/Brillant-Super-SELECT-3x2-SPL-SG-Cup-FAS-logos-29-Nov-2020-2-scaled.jpg" alt="Soccer balls" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/00a651/ffffff?text=Soccer+Balls'">
+    <main>
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <p class="hero-kicker">Games / Instant Win</p>
+                    <h1>Instant Win Football</h1>
+                    <div class="hero-tags">
+                        <span class="tag tag-new">New</span>
+                        <span class="tag">Instant Win</span>
+                        <span class="tag">Football</span>
                     </div>
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Soccer Balls</h3>
-                    <p class="service-description">Professional match balls, training balls, and practice balls in various sizes. FIFA approved options available. Perfect for all skill levels and playing conditions.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPXWAEom0Xd2x0iz-DhO6GKSdYcRzJGJW2cQ&s" alt="Soccer cleats" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/00a651/ffffff?text=Footwear+%26+Cleats'">
-                    </div>
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 6L9 17l-5-5"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Footwear & Cleats</h3>
-                    <p class="service-description">High-quality soccer cleats, turf shoes, and indoor shoes for all ages. Top brands featuring the latest technology for optimal performance and comfort.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnb6sDpo2WmoXC1WYkLsLCJ1XAnlyRWkHufA&s" alt="Soccer jerseys" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/00a651/ffffff?text=Jerseys+%26+Apparel'">
-                    </div>
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Jerseys & Apparel</h3>
-                    <p class="service-description">Team jerseys, training wear, shorts, socks, and custom uniforms. Official replicas and authentic gear from top clubs and national teams worldwide.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4pcS-kJvE9T7bInQTjlSS3ZmfTDJMg96Lag&s" alt="Goalkeeper equipment" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/00a651/ffffff?text=Goalkeeper+Equipment'">
-                    </div>
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="9" y1="3" x2="9" y2="21"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Goalkeeper Equipment</h3>
-                    <p class="service-description">Goalkeeper gloves, jerseys, padded shorts, and protective gear. Professional quality equipment designed for maximum protection and performance.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjIDXSzU6S_brjkz-eaz6MxZ1XcAKuNH2S5g&s" alt="Training equipment" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/00a651/ffffff?text=Training+Equipment'">
-                    </div>
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Training Equipment</h3>
-                    <p class="service-description">Cones, agility ladders, training poles, rebounders, goal posts, and practice equipment. Essential gear for improving skills and team training sessions.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://goalkicksoccer.com/cdn/shop/articles/what-are-5-pieces-of-equipment-for-the-game-of-soccer-650252_1200x.webp?v=1740782723" alt="Soccer accessories" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/00a651/ffffff?text=Accessories+%26+Gear'">
-                    </div>
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Accessories & Gear</h3>
-                    <p class="service-description">Shin guards, bags, water bottles, armbands, headbands, and all essential soccer accessories. Complete your soccer gear collection with quality products.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcYk71igzqxmST-9UnAT4hjYHgw0DGrGqW3A&s" alt="Wintech Soccer equipment" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600/00a651/ffffff?text=Wintech+Soccer'">
-                </div>
-                <div class="about-text">
-                    <h2 class="section-title">About Wintech Soccer</h2>
-                    <p class="about-description">
-                        Wintech Soccer is your trusted source for premium soccer equipment and gear. We offer a wide selection of high-quality products 
-                        for players of all ages and skill levels, from recreational players to professional athletes.
+                    <p class="hero-subtitle">
+                        Wintech Instant Win Football gives players on‑demand virtual matches, familiar football markets,
+                        and results in minutes across desktop and mobile.
                     </p>
-                    <p class="about-description">
-                        Our extensive catalog includes everything from soccer balls and footwear to team uniforms and training equipment. We work with 
-                        top brands and manufacturers to ensure you get the best quality products at competitive prices. Your performance is our priority.
-                    </p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <div class="stat-number">10K+</div>
-                            <div class="stat-label">Happy Customers</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">500+</div>
-                            <div class="stat-label">Products Available</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Top Brands</div>
-                        </div>
+                    <div class="hero-actions">
+                        <a href="#on-demand" class="btn btn-primary">Explore product</a>
+                        <a href="#contact" class="btn btn-outline">Book a demo</a>
+                    </div>
+                </div>
+                <div class="hero-panel">
+                    <div class="hero-stat">
+                        <span class="hero-stat-label">Match start</span>
+                        <span class="hero-stat-value">On demand</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-label">Max legs</span>
+                        <span class="hero-stat-value">10 games</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-label">Devices</span>
+                        <span class="hero-stat-value">Browser‑based</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Have questions about our products? Need help finding the right equipment? Contact us and we'll be happy to assist you.</p>
+        <!-- Virtual Football On Demand -->
+        <section id="on-demand" class="section section-alt">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Virtual Football On Demand</h2>
+                    <p>
+                        Transform scheduled virtuals into an always‑on football experience. Players launch a fixture, pick markets,
+                        and see outcomes in a single short session.
+                    </p>
+                </header>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <h3>On‑demand fixtures</h3>
+                        <p>
+                            Matches spin up whenever a player is ready, so there is no waiting for a schedule or next race cycle.
+                            Ideal for quick visits and second‑screen play.
+                        </p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Familiar football markets</h3>
+                        <p>
+                            Offer core outcomes like match result, total goals, handicaps, and correct score so sports fans can bet
+                            the way they already understand.
+                        </p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Single or multi‑match flow</h3>
+                        <p>
+                            Configure straightforward one‑match bets or multi‑match sequences with up to ten legs in a single
+                            instant win journey.
+                        </p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Watch or jump to result</h3>
+                        <p>
+                            Give players the choice to enjoy highlights or fast‑forward straight to the final score when they care
+                            more about outcomes than the build‑up.
+                        </p>
+                    </article>
+                </div>
             </div>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Indonesia</p>
-                        </div>
+        </section>
+
+        <!-- Designed for Fast Play -->
+        <section id="fast-play" class="section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Designed for Fast Play</h2>
+                    <p>
+                        Built for high‑frequency sessions, Instant Win Football fits neatly alongside your sportsbook portfolio.
+                    </p>
+                </header>
+                <div class="columns">
+                    <div class="column">
+                        <h3>High‑frequency engagement</h3>
+                        <p>
+                            Compact match cycles and short time to result encourage repeat play while keeping sessions controlled
+                            and transparent.
+                        </p>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+62 77712457</p>
-                        </div>
+                    <div class="column">
+                        <h3>Flexible bet configuration</h3>
+                        <p>
+                            Tune stake ranges, returns, and slip behaviour to align with local rules and risk preferences without
+                            changing the core experience.
+                        </p>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@wintech-network.com</p>
-                        </div>
+                    <div class="column">
+                        <h3>Operational visibility</h3>
+                        <p>
+                            Reporting hooks provide a clear view of volumes and performance, helping trading and product teams
+                            manage Instant Win alongside other content.
+                        </p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company / Flexible Launch -->
+        <section id="company" class="section section-alt">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Flexible and Easy to Launch</h2>
+                    <p>
+                        Wintech delivers Instant Win Football as a browser‑native module that plugs cleanly into existing
+                        platforms.
+                    </p>
+                </header>
+                <div class="columns">
+                    <div class="column">
+                        <h3>Browser‑based delivery</h3>
+                        <p>
+                            No plug‑ins or additional downloads. The game runs in modern browsers across desktop, mobile, and
+                            tablet for simple deployment.
+                        </p>
+                    </div>
+                    <div class="column">
+                        <h3>Local market support</h3>
+                        <p>
+                            Multi‑currency, multi‑language options and adaptable UI text help you align Instant Win Football with
+                            local market expectations.
+                        </p>
+                    </div>
+                    <div class="column">
+                        <h3>Integration‑ready APIs</h3>
+                        <p>
+                            API endpoints and configuration options make it straightforward to connect Wintech content to wallet,
+                            account, and promotion systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section contact">
+            <div class="container contact-inner">
+                <div class="contact-copy">
+                    <h2>Let’s talk Instant Win Football</h2>
+                    <p>
+                        Share a few details and the Wintech team will follow up with product information, pricing, and a tailored
+                        demo for your environment.
+                    </p>
+                    <ul class="contact-meta">
+                        <li>Optimised for regulated markets</li>
+                        <li>Supports online and retail channels</li>
+                        <li>Designed for high‑frequency portfolios</li>
+                    </ul>
                 </div>
                 <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" required />
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <div class="field">
+                        <label for="email">Work email</label>
+                        <input id="email" name="email" type="email" required />
                     </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <div class="field">
+                        <label for="company">Company</label>
+                        <input id="company" name="company" type="text" required />
                     </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <div class="field">
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary full-width">Contact Wintech</button>
                 </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-title">⚽ Wintech Soccer</h3>
-                    <p class="footer-description">Your trusted source for premium soccer equipment, gear, and everything you need for the beautiful game.</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-heading">Contact</h4>
-                    <ul class="footer-links">
-                        <li>Phone: +62 77712457</li>
-                        <li>Location: Indonesia</li>
-                        <li>Email: info@wintech-network.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Wintech Soccer. All rights reserved.</p>
-            </div>
+        <div class="container footer-inner">
+            <p>© 2026 Wintech. Instant Win Football by Wintech.</p>
+            <p class="footer-links">
+                <span>Games</span>
+                <span>Solutions</span>
+                <span>Technology</span>
+                <span>Company</span>
+                <span>Contact</span>
+            </p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
