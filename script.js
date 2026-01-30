@@ -6,17 +6,31 @@ if (menuToggle && navMenu) {
   menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('open');
   });
+}
 
-  // allow tapping Games to show dropdown on mobile
-  const gamesButton = navMenu.querySelector('.has-dropdown .nav-button');
-  const gamesDropdown = navMenu.querySelector('.has-dropdown .dropdown');
-  if (gamesButton && gamesDropdown) {
-    gamesButton.addEventListener('click', (e) => {
-      // prevent smooth-scroll logic
-      e.stopPropagation();
-      gamesDropdown.style.display = gamesDropdown.style.display === 'grid' ? 'none' : 'grid';
-    });
-  }
+// Dropdown menu functionality (works on all devices)
+const gamesButton = document.querySelector('.has-dropdown .nav-button');
+const gamesDropdown = document.querySelector('.has-dropdown .dropdown');
+const hasDropdown = document.querySelector('.has-dropdown');
+
+if (gamesButton && gamesDropdown && hasDropdown) {
+  // Toggle dropdown on button click
+  gamesButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    gamesDropdown.classList.toggle('open');
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hasDropdown.contains(e.target)) {
+      gamesDropdown.classList.remove('open');
+    }
+  });
+
+  // Prevent dropdown from closing when clicking inside it
+  gamesDropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
 }
 
 // Smooth scroll for in-page links
